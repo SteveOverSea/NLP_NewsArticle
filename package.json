@@ -1,5 +1,30 @@
 {
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.34.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "name": "nlp-news-article",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "node src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteveOverSea/NLP_NewsArticle.git"
+  },
+  "author": "Stefan Rausch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SteveOverSea/NLP_NewsArticle/issues"
+  },
+  "homepage": "https://github.com/SteveOverSea/NLP_NewsArticle#readme",
+  "description": ""
 }
