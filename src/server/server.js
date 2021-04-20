@@ -5,7 +5,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 const FormData = require("form-data");
 const fetch = require("node-fetch");
-const { resolve } = require("uri-js");
 
 const port = 8080;
 
