@@ -6,15 +6,17 @@ export async function makeApiRequest() {
     const data = { url: inputUrl };
 
     try {
-       await fetch("/analyze", {
+        const response = await fetch("/analyze", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         });
+        
+        const responseData = await response.json();
+        console.log(responseData);
     } catch (error) {
         console.log(error);
     }
-    
 }
