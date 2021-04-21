@@ -4,3 +4,5 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 import { sendAndGetAPIData } from "./js/apiRequestHandler"
+import { formChecker } from "./js/formChecker.js"
+
