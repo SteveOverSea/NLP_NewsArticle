@@ -1,1 +1,1 @@
-import { makeApiRequest } from "./js/apiRequestHandler"
+import { sendAndGetAPIData } from "./js/apiRequestHandler"
