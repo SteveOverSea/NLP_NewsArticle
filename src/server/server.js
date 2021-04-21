@@ -6,7 +6,7 @@ dotenv.config();
 const FormData = require("form-data");
 const fetch = require("node-fetch");
 
-const port = 8080;
+const port = 8079;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -23,7 +23,7 @@ app.post("/analyze", async (req, res) => {
 
 async function makeApiRequest(urlToAnalyze) {
     let data = {};
-    
+
     const formdata = new FormData();
     formdata.append("key", process.env.API_KEY);
     formdata.append("txt", urlToAnalyze);
