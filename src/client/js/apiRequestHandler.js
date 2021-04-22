@@ -1,6 +1,7 @@
 import { formChecker } from "./formChecker";
 
 document.getElementById("send-button").addEventListener("click", sendAndGetAPIData);
+const errorDiv = document.getElementById("error");
 
 export async function sendAndGetAPIData(event) {
     event.preventDefault();
@@ -16,6 +17,9 @@ export async function sendAndGetAPIData(event) {
         } else {
             throw new Error("invalid input");
         }
+
+        error.classList.add("loading");
+        error.innerHTML = "loading...";
     
         const response = await fetch("/analyze", {
             method: "POST",
@@ -28,6 +32,9 @@ export async function sendAndGetAPIData(event) {
         });
         
        const responseData = await response.json();
+
+       error.innerHTML = "";
+       error.classList.remove("loading");
 
        for (const property in responseData) {
            document.getElementById(property).innerHTML += "<span>" + responseData[property] + "</span>";
