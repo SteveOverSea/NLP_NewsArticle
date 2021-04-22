@@ -3,7 +3,7 @@
 ## Specification
 
 This project is part of the Udacity Front End Dev Nanodegree.
-For the whole project should use Webpack and other tools like loaders, sass, minifiers, optimiziers, jest-tests and also service workers.
+The whole project should use Webpack and other tools like loaders, sass, minifiers, optimiziers, jest-tests and also service workers.
 
 ## Structure
 
