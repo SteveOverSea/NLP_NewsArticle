@@ -12,15 +12,18 @@ export async function sendAndGetAPIData(event) {
     let data = {};
 
     try {
+        //check if input is valid
         if (formChecker(inputUrl)) {
             data = { url: inputUrl };
         } else {
             throw new Error("invalid input");
         }
 
+        //show loading text
         error.classList.add("loading");
         error.innerHTML = "loading...";
     
+        //server post request
         const response = await fetch("/analyze", {
             method: "POST",
             cache: 'no-cache',
@@ -33,9 +36,11 @@ export async function sendAndGetAPIData(event) {
         
        const responseData = await response.json();
 
+       //remove loading text
        error.innerHTML = "";
        error.classList.remove("loading");
 
+       //update result text and show result container
        for (const property in responseData) {
            document.getElementById(property).innerHTML += "<span>" + responseData[property] + "</span>";
        }
@@ -47,6 +52,7 @@ export async function sendAndGetAPIData(event) {
     }
 }
 
+//resets all the result elements
 function resetResultDivs() {
     document.getElementById("result-container").classList.add("hidden");
     document.getElementById("result-container").classList.remove("show");
