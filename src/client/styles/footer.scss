@@ -1,0 +1,22 @@
+#result-container {
+    border: 1px solid #FFF;
+    max-height: 500px;
+    max-width: 80%;
+    margin: 2rem auto;
+
+    div {
+        text-align: left;
+        background-color: transparent;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+        position: relative;
+        left: 55%;
+        transform: translateX(-25%);
+
+        span {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-left: 0.5rem;
+        }
+    }
+}
