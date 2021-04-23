@@ -1,7 +1,9 @@
 import { formChecker } from "./formChecker";
 
-document.getElementById("send-button").addEventListener("click", sendAndGetAPIData);
-const errorDiv = document.getElementById("error");
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("send-button").addEventListener("click", sendAndGetAPIData);
+    const errorDiv = document.getElementById("error"); 
+});
 
 export async function sendAndGetAPIData(event) {
     event.preventDefault();
@@ -46,9 +48,11 @@ export async function sendAndGetAPIData(event) {
        }
        document.getElementById("result-container").classList.remove("hidden");
        document.getElementById("result-container").classList.add("show");
+       return true;
 
     } catch (error) {
         console.log(error);
+        return false;
     }
 }
 

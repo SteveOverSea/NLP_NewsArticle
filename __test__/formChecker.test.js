@@ -14,8 +14,5 @@ describe("Testing the formChecker functionality", () => {
 
            urlInputs.forEach(urlInput => {
             expect(formChecker(urlInput)).toEqual(true);
-        });
-
-
-           
+        });      
 })});
